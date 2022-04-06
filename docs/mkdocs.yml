@@ -1,1 +1,61 @@
-site_name: My Docs
+site_name: Curve Docs
+site_author: CurveFi
+
+plugins:
+  - search
+  - autolinks
+  - git-revision-date-localized:
+      type: timeago
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - admonition
+  - meta
+  - toc:
+      permalink: true
+      baselevel: 2
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+theme:
+  name: material
+  logo: "images/logo.png"
+  features:
+    - navigation.top
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+extra_css:
+  - 'stylesheets/extra.css'
+  - 'stylesheets/links.css'
+
+repo_name: bout3fiddy/curve-mkdocs # for example: 'lyz-code/pydo'
+repo_url: https://github.com/bout3fiddy/curve-mkdocs # for example: 'https://github.com/lyz-code/pydo'
