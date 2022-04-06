@@ -1,6 +1,5 @@
-site_name: {{ site_name }}
-site_author: {{ your_name }}
-site_url: {{ site_url }}
+site_name: Curve Docs
+site_author: CurveFi
 nav:
   - Introduction: 'index.md'
   - Basic Usage: 'basic_usage.md'
@@ -67,5 +66,5 @@ extra_css:
   - 'stylesheets/extra.css'
   - 'stylesheets/links.css'
 
-repo_name: {{ repository_name }} # for example: 'lyz-code/pydo'
-repo_url: {{ repository_url }} # for example: 'https://github.com/lyz-code/pydo'
+repo_name: curve-mkdocs # for example: 'lyz-code/pydo'
+repo_url: https://github.com/bout3fiddy/curve-mkdocs # for example: 'https://github.com/lyz-code/pydo'
