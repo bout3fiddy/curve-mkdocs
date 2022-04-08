@@ -1,4 +1,5 @@
 site_name: Curve Docs
+site_url: https://bout3fiddy.github.io/curve-mkdocs/
 site_author: CurveFi
 
 plugins:
@@ -72,4 +73,4 @@ extra_css:
   - 'stylesheets/extra.css'
 
 repo_name: bout3fiddy/curve-mkdocs # for example: 'lyz-code/pydo'
-repo_url: https://github.com/bout3fiddy/curve-mkdocs # for example: 'https://github.com/lyz-code/pydo'
+repo_url: https://github.com/bout3fiddy/curve-mkdocs.git # for example: 'https://github.com/lyz-code/pydo'
