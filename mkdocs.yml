@@ -1,5 +1,5 @@
 site_name: Curve Docs
-#site_url: https://bout3fiddy.github.io/curve-mkdocs/
+site_url: https://bout3fiddy.github.io/curve-mkdocs/
 site_author: CurveFi
 
 plugins:

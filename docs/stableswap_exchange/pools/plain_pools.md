@@ -319,3 +319,25 @@ todo: add hyperlink to amplification coefficient description
         ```shell
         >>> todo: calculate_withdraw_one_coin console output example
         ```
+
+!!! info "Withdraw a single coin from the pool"
+
+    ``_token_amount``: Amount of LP tokens to burn in the withdrawal
+
+    ``i``: Index value of the coin to withdraw
+
+    ``_min_amount``: Minimum amount of coin to receive
+
+    Returns the amount of coin ``i`` received.
+
+    === "Vyper Code"
+    
+        ```vyper
+        StableSwap.remove_liquidity_one_coin(_token_amount: uint256, i: int128, _min_amount: uint256) → uint256
+        ```
+        
+    === "Output"
+    
+        ```shell
+        >>> todo: remove_liquidity_one_coin console output example
+        ```
