@@ -1,12 +1,18 @@
-The simplest Curve pool is a plain pool, which is an implementation of the StableSwap invariant for two or more tokens. The key characteristic of a plain pool is that the pool contract holds all deposited assets at **all** times.
+## Overview
 
-An example of a Curve plain pool is [3Pool](https://github.com/curvefi/curve-contract/tree/master/contracts/pools/3pool), which contains the tokens ``DAI``, ``USDC`` and ``USDT``.
+The simplest Curve pool is a plain pool, which is an implementation of the StableSwap invariant for two or more tokens. 
+The key characteristic of a plain pool is that the pool contract holds all deposited assets at **all** times.
+
+An example of a Curve plain pool is [3Pool](https://github.com/curvefi/curve-contract/tree/master/contracts/pools/3pool), 
+which contains the tokens ``DAI``, ``USDC`` and ``USDT``.
 
 !!! note
 
     The API of plain pools is also implemented by lending and metapools.
 
-The following Brownie console interaction examples are using [EURS](https://etherscan.io/address/0x0Ce6a5fF5217e38315f87032CF90686C96627CAA) Pool. The template source code for plain pools may be viewed on [GitHub](https://github.com/curvefi/curve-contract/blob/master/contracts/pool-templates/base/SwapTemplateBase.vy).
+The following Brownie console interaction examples are using 
+[EURS](https://etherscan.io/address/0x0Ce6a5fF5217e38315f87032CF90686C96627CAA) Pool. The template source code for plain
+pools may be viewed on [GitHub](https://github.com/curvefi/curve-contract/blob/master/contracts/pool-templates/base/SwapTemplateBase.vy).
 
 ### Get Pool Info        
 
@@ -171,7 +177,7 @@ todo: add hyperlink to amplification coefficient description
         - Admin fee is set at 50% (``5000000000``) and is paid out to veCRV holders.
 
 
-### Exchange two coins
+### Exchange Two Coins
 
 !!! info "Get the amount of coin ``j`` one would receive for swapping ``_dx`` of coin ``i``"
 
