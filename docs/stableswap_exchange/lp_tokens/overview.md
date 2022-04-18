@@ -1,5 +1,3 @@
-### Curve StableSwap Exchange: LP Tokens
-
 In exchange for depositing coins into a Curve pool, liquidity providers receive pool LP (liquidity pool) tokens. 
 A Curve pool LP token is an ERC20 contract specific to the Curve pool. Hence, LP tokens are transferrable. 
 Holders of pool LP tokens may deposit and stake the token into a pool’s liquidity gauge in order to receive ``CRV`` token rewards. 
@@ -13,6 +11,7 @@ Currently, the following versions of Curve StableSwap LP tokens exist:
 - [CurveTokenV2](https://github.com/curvefi/curve-contract/blob/master/contracts/tokens/CurveTokenV3.vy): LP token targetting Vyper [^0.2.0](https://vyper.readthedocs.io/en/stable/release-notes.html#v0-2-1)
 
 todo: add hyperlink to deployment addresses
+
 The version of each pool’s LP token can be found in the Deployment Addresses.
 
 !!! note

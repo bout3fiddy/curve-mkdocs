@@ -2,11 +2,9 @@
 
 ### `CurveToken.name`
 
-!!! description
+!!! description "CurveToken.name() → string[64]: view"
 
-    Get the name of the token.
-
-    Returns: Token name (`string[64]`) assigned during contract deployment.
+    Get token name.
 
     ??? quote "Source code"
 
@@ -36,11 +34,9 @@
 
 ### `CurveToken.symbol`
 
-!!! description
+!!! description "CurveToken.symbol() → string[32]: view"
 
     Get token symbol.
-
-    Returns: Token symbol (`string[32]`) assigned during contract deployment.
 
     ??? quote "Source code"
 
@@ -70,11 +66,9 @@
 
 ### `CurveToken.decimals`
 
-!!! description
+!!! description "CurveToken.decimals() → uint256: view"
 
-    Get number of decimals for the token
-
-    Returns: decimals (`uint256`) of the CurveToken
+    Get token precision (decimals).
 
     ??? quote "Source code"
 
@@ -104,15 +98,13 @@
 
 ### `CurveToken.balanceOf`
 
-!!! description
+!!! description "CurveToken.balanceOf(account: address) → uint256: view"
 
     Get token balance for an account.
 
     | Input      | Type   | Description |
     | ----------- | -------| ----|
     | `address` | `address` | Address to get the token balance for |
-
-    Returns: Total token supply (`uint256`)
 
     ??? quote "Source code"
 
@@ -147,11 +139,9 @@
 
 ### `CurveToken.totalSupply`
 
-!!! description
+!!! description "CurveToken.totalSupply() → uint256: view"
 
     Get total token supply.
-
-    Returns: Total token supply (`uint256`)
 
     ??? quote "Source code"
 
@@ -174,11 +164,9 @@
 
 ### `CurveToken.allowance`
 
-!!! description
+!!! description "CurveToken.allowance(_owner: address, _spender: address) → uint256: view"
 
-    This view method gets the allowance of an address (``_spender``) to spend on behalf of some other account.
-
-    Returns: the allowance (`uint256`) of ``_spender`` for ``_owner``.
+    This view method gets the allowance of an address (`_spender`) to spend on behalf of some other account `_owner`.
 
     | Input      | Type   | Description |
     | ----------- | -------| ----|
@@ -202,15 +190,14 @@
 
 ### `CurveToken.transfer`
 
-!!! description
+!!! description "CurveToken.transfer(_to: address, _value: uint256) → bool"
 
-    Transfer tokens to a specified address. `msg.sender` is the implicit `_from` address.
-
-    Returns: ``True`` if the transfer succeeded.
+    Transfer tokens to a specified address. `_from` address is implicitly `msg.sender`. Returns ``True`` if the
+    transfer succeeds.
 
     | Input      | Type   | Description |
     | ----------- | -------| ----|
-    | `_to` | `uint256` | Receiver of the tokens |
+    | `_to` | `address` | Receiver of the tokens |
     | `_value`    | `uint256` | Amount of tokens to be transferred |
 
     ??? quote "Source code"
@@ -233,17 +220,15 @@
 
 ### `CurveToken.transferFrom`
 
-!!! description
+!!! description "CurveToken.transferFrom(_from: address, _to: address, _value: uint256) → bool"
 
     Transfer tokens from one address to another. `msg.sender` does the transfer on behalf of the `_from` address, and
-    requires sufficient spending allowance.
-
-    Returns: ``True`` if transfer succeeded.
+    requires sufficient spending allowance. Returns ``True`` if transfer succeeds.
 
     | Input      | Type   | Description |
     | ----------- | -------| ----|
     | `_from` | `address` | Address which `msg.sender` want to send tokens from |
-    | `_to` | `uint256` | Address which `msg.sender` want to transfer to |
+    | `_to` | `address` | Address which `msg.sender` want to transfer to |
     | `_value`    | `uint256` | Amount of tokens to be transferred |
 
     ??? quote "Source code"
@@ -279,11 +264,10 @@
 
 ### `CurveToken.approve`
 
-!!! description
+!!! description "CurveToken.approve(_spender: address, _value: uint256) → bool"
 
-    Approve the passed address to spend the specified amount of tokens on behalf of ``msg.sender``.
-
-    Returns: ``True`` on successful approvals.
+    Approve the passed address to spend the specified amount of tokens on behalf of ``msg.sender``. Returns ``True`` on
+    successful approvals.
 
     | Input      | Type   | Description |
     | ----------- | -------| ----|
@@ -333,7 +317,7 @@ The following methods are only callable by the ``minter`` (private attribute).
 
 ### `CurveToken.mint`
 
-!!! description
+!!! description "CurveToken.mint(_to: address, _value: uint256)"
 
     This encapsulates the modification of balances such that the proper events are emitted.
 
@@ -364,7 +348,7 @@ The following methods are only callable by the ``minter`` (private attribute).
 
 ### `CurveToken.burn`
 
-!!! description
+!!! description "CurveToken.burn(_value: uint256)"
 
     Burn an amount of the token of ``msg.sender``.
 
@@ -401,7 +385,7 @@ The following methods are only callable by the ``minter`` (private attribute).
 
 ### `CurveToken.burnFrom`
 
-!!! description
+!!! description "CurveToken.burnFrom(_to: address, _value: uint256)"
 
     Burn an amount of the token from a given account.
 
@@ -435,4 +419,23 @@ The following methods are only callable by the ``minter`` (private attribute).
             """
             assert msg.sender == self.minter, "Only minter is allowed to burn"
             self._burn(_to, _value)
+        ```
+
+### `CurveToken.set_minter`
+
+!!! description "CurveToken.set_minter(_minter: address)"
+
+    Set a new minter for the token.
+
+    | Input      | Type   | Description |
+    | ----------- | -------| ----|
+    | `_minter`       |  `address` | Address of the new minter |
+
+    ??? quote "Source code"
+
+        ```python
+        @public
+        def set_minter(_minter: address):
+            assert msg.sender == self.minter
+            self.minter = _minter
         ```
