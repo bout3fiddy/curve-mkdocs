@@ -18,6 +18,8 @@ action can be applied is given by the constant pool attribute ``admin_actions_de
     | ----------- | -------| ----|
     | `_owner`       |  `address` | Future owner of the pool contract |
 
+    Emits: <mark style="background-color: orange; color: black">CommitNewAdmin</mark>  
+
     ??? quote "Source code"
 
         ```python
@@ -315,6 +317,7 @@ For an overview of how fees are distributed, please refer to Fee Collection and 
         ```
 
 ### `StableSwap.admin_balances`
+
 !!! description "`StableSwap.admin_balances(i: uint256) → uint256`"
 
     Get the admin balance for a single coin in the pool.
