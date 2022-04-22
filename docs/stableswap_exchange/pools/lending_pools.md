@@ -138,6 +138,8 @@ For example, calling ``exchange`` on the Compound Pool, would result in a swap b
     | `_dx`       |  `uint256` | Amount of ``i`` being exchanged |
     | `_min_dy`       |  `uint256` | Minimum amount of ``j`` to receive |
 
+    Emits: <mark style="background-color: #FFD580; color: black">TokenExchangeUnderlying</mark>
+
     ??? quote "Source code"
 
         ```python
@@ -233,6 +235,8 @@ the wrapped or underlying token.
     | `_amounts`       |  `uint256[N_COINS]` | List of amounts of coins to deposit |
     | `_min_mint_amount`       |  `uint256` | Minimum amount of LP tokens to mint from the deposit |
     | `_use_underlying`       |  `bool` | If ``True``, deposit underlying assets instead of wrapped assets |
+
+    Emits: <mark style="background-color: #FFD580; color: black">AddLiquidity</mark>
     
     ??? quote "Source code"
 

@@ -200,6 +200,8 @@
     | `_to` | `address` | Receiver of the tokens |
     | `_value`    | `uint256` | Amount of tokens to be transferred |
 
+    Emits: <mark style="background-color: #FFD580; color: black">Transfer</mark>
+
     ??? quote "Source code"
 
         ```python
@@ -230,6 +232,8 @@
     | `_from` | `address` | Address which `msg.sender` want to send tokens from |
     | `_to` | `address` | Address which `msg.sender` want to transfer to |
     | `_value`    | `uint256` | Amount of tokens to be transferred |
+
+    Emits: <mark style="background-color: #FFD580; color: black">Transfer</mark>
 
     ??? quote "Source code"
 
@@ -273,6 +277,8 @@
     | ----------- | -------| ----|
     | `_spender` | `address` | Address which will spend the funds |
     | `_value`    | `uint256` | Amount of tokens to be spent |
+
+    Emits: <mark style="background-color: #FFD580; color: black">Approval</mark>
 
     ??? quote "Source code"
 
@@ -326,6 +332,8 @@ The following methods are only callable by the ``minter`` (private attribute).
     | `_to` | `address` | Address that will receive the minted tokens |
     | `_value`    | `uint256` | Amount of tokens that will be minted |
 
+    Emits: <mark style="background-color: #FFD580; color: black">Transfer</mark>
+
     ??? quote "Source code"
 
         ```python
@@ -355,6 +363,8 @@ The following methods are only callable by the ``minter`` (private attribute).
     | Input      | Type   | Description |
     | ----------- | -------| ----|
     | `_value`    | `uint256` | Token amount that will be burned |
+
+    Emits: <mark style="background-color: #FFD580; color: black">Transfer</mark>
 
     ??? quote "Source code"
 
@@ -393,6 +403,8 @@ The following methods are only callable by the ``minter`` (private attribute).
     | ----------- | -------| ----|
     | `_to`       |  `address` | Account whose tokens will be burned|
     | `_value`    | `uint256` | Token amount that will be burned |
+
+    Emits: <mark style="background-color: #FFD580; color: black">Transfer</mark>
 
     ??? quote "Source code"
 

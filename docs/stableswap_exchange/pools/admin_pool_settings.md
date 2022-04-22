@@ -18,7 +18,7 @@ action can be applied is given by the constant pool attribute ``admin_actions_de
     | ----------- | -------| ----|
     | `_owner`       |  `address` | Future owner of the pool contract |
 
-    Emits: <mark style="background-color: orange; color: black">CommitNewAdmin</mark>  
+    Emits: <mark style="background-color: #FFD580; color: black">CommitNewAdmin</mark>  
 
     ??? quote "Source code"
 
@@ -55,6 +55,8 @@ action can be applied is given by the constant pool attribute ``admin_actions_de
 !!! description "StableSwap.apply_transfer_ownership()"
 
     Transfers ownership of the pool from current owner to the owner previously set via ``commit_transfer_ownership``.
+
+    Emits: <mark style="background-color: #FFD580; color: black">NewAdmin</mark>
 
     ??? quote "Source code"
 
@@ -133,6 +135,8 @@ coefficient for a pool after it has been deployed. However, it requires a vote w
     | `_future_A`       |  `uint256` | New future value of ``A`` |
     | `_future_time`       |  `uint256` | Timestamp at which new ``A`` should take effect |
 
+    Emits: <mark style="background-color: #FFD580; color: black">RampA</mark>
+
     ??? quote "Source code"
 
         ```python
@@ -178,6 +182,8 @@ coefficient for a pool after it has been deployed. However, it requires a vote w
 
     Stop ramping ``A`` up or down and sets ``A`` to current ``A``.
 
+    Emits: <mark style="background-color: #FFD580; color: black">StopRampA</mark>
+
     ??? quote "Source code"
 
         ```python
@@ -219,6 +225,7 @@ For an overview of how fees are distributed, please refer to Fee Collection and 
     | `_new_fee`       |  `uint256` | New pool fee |
     | `_new_admin_fee`       |  `uint256` | New admin fee (expressed as a percentage of the pool fee) |
 
+    Emits: <mark style="background-color: #FFD580; color: black">CommitNewFee</mark>
 
     ??? quote "Source code"
     
@@ -263,6 +270,8 @@ For an overview of how fees are distributed, please refer to Fee Collection and 
 !!! description "StableSwap.apply_new_fee()"
 
     Apply the previously committed new pool and admin fees for the pool.
+
+    Emits: <mark style="background-color: #FFD580; color: black">NewFee</mark>
 
     ??? quote "Source code"
 
@@ -312,7 +321,7 @@ For an overview of how fees are distributed, please refer to Fee Collection and 
     === "Example"
 
         ```shell
-        >>> pool.commit_new_fee()
+        >>> pool.revert_new_parameters()
         todo: log output
         ```
 
@@ -368,6 +377,7 @@ For an overview of how fees are distributed, please refer to Fee Collection and 
         ```
 
 ### `StableSwap.donate_admin_fees`
+
 !!! description "`StableSwap.donate_admin_fees()`"
 
     Donate all admin fees to the pool’s liquidity providers.
@@ -387,6 +397,7 @@ For an overview of how fees are distributed, please refer to Fee Collection and 
         ```shell
         >>> pool.donate_admin_fees()
         todo: log output
+        ```
 
     !!! note
 

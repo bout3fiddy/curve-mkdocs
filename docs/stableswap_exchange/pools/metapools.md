@@ -470,6 +470,10 @@ Underlying coins: ``GUSD``, ``DAI``, ``USDC``, ``USDT``
     | `_dx`       |  `uint256` | Amount of ``i`` being exchanged |
     | `_min_dy`      |  `uint256` | Minimum amount of ``j`` to receive |
 
+    Emits: <mark style="background-color: #FFD580; color: black">TokenExchange</mark>
+
+    todo: explain how fee is calculated
+
     ??? quote "Source code"
 
         ```python
@@ -540,6 +544,8 @@ Underlying coins: ``GUSD``, ``DAI``, ``USDC``, ``USDT``
     | `j`       |  `int128` | Index value of the coin to receive|
     | `_dx`       |  `uint256` | Amount of ``i`` being exchanged |
     | `_min_dy`      |  `uint256` | Minimum amount of ``j`` to receive |
+
+    Emits: <mark style="background-color: #FFD580; color: black">TokenExchangeUnderlying</mark>
 
     ??? quote "Source code"  
     

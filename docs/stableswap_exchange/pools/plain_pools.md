@@ -423,6 +423,8 @@ pools may be viewed on
     Returns the actual amount of coin ``j`` received. Index values can be found via the 
     ``coins`` public getter method.
 
+    Emits: <mark style="background-color: #FFD580; color: black">TokenExchange</mark>
+
     ??? quote "Source code"
 
         ```python
@@ -566,6 +568,8 @@ pools may be viewed on
     | `amounts`       |  `uint256[N_COINS]` | Amount of each coin being deposited |
     | `min_mint_amount`       |  `uint256` | Minimum amount of LP tokens to mint from the deposit |
 
+    Emits: <mark style="background-color: #FFD580; color: black">AddLiquidity</mark>
+
     ??? quote "Source code"
 
         ```python
@@ -675,6 +679,8 @@ pools may be viewed on
     | `_amount`       |  `uint256` | Quantity of LP tokens to burn in the withdrawal |
     | `min_amounts`       |  `uint256[N_COINS]`` | Minimum amounts of underlying coins to receive |
 
+    Emits: <mark style="background-color: #FFD580; color: black">RemoveLiquidity</mark>
+
     ??? quote "Source code"
 
         ```python
@@ -733,6 +739,8 @@ pools may be viewed on
     | ----------- | -------| ----|
     | `amounts`       |  `uint256[N_COINS]` | List of amounts of underlying coins to withdraw |
     | `max_burn_amount`       |  `uint256` | Maximum amount of LP token to burn in the withdrawal |
+
+    Emits: <mark style="background-color: #FFD580; color: black">RemoveLiquidityImbalance</mark>
 
     ??? quote "Source code"
 
@@ -883,6 +891,8 @@ pools may be viewed on
     | `_token_amount` | `uint256` | Amount of LP tokens to burn in the withdrawal |
     | `i` | `int128` | Index value of the coin to withdraw |
     | `_min_amount` | `uint256` | Minimum amount of coin to receive |
+
+    Emits: <mark style="background-color: #FFD580; color: black">RemoveLiquidityOne</mark>
 
     ??? quote "Source code"
 
