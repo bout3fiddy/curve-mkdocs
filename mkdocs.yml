@@ -10,6 +10,37 @@ plugins:
   - minify:
       minify_html: true
 
+nav:
+  - Stableswap Exchange:
+    - Overview: stableswap_exchange/overview.md
+    - Pools:
+        - Overview: stableswap_exchange/pools/overview.md
+        - Plain Pools: stableswap_exchange/pools/plain_pools.md
+        - Lending Pools: stableswap_exchange/pools/lending_pools.md
+        - Metapools: stableswap_exchange/pools/metapools.md
+        - Admin Controls: stableswap_exchange/pools/admin_pool_settings.md
+    - Liquidity Pool Tokens:
+        - Overview: stableswap_exchange/lp_tokens/overview.md
+        - Curve Token V1: stableswap_exchange/lp_tokens/curve_token_v1.md
+        - Curve Token V2: stableswap_exchange/lp_tokens/curve_token_v2.md
+        - Curve Token V3: stableswap_exchange/lp_tokens/curve_token_v3.md
+    - Deposit Contracts:
+        - Overview: stableswap_exchange/deposit_contracts/overview.md
+        - Lending Pool Deposits: stableswap_exchange/deposit_contracts/lending_pool_deposits.md
+        - Metapool Deposits: stableswap_exchange/deposit_contracts/metapool_deposits.md
+    - Cross Asset Swaps:
+        - Overview: stableswap_exchange/cross_asset_swaps/overview.md
+        - SynthSwap: stableswap_exchange/cross_asset_swaps/synthswap_exchange.md
+    - Factory:
+        - Overview: stableswap_exchange/factory/overview.md
+  - Cryptoswap Exchange:
+      - Overview: cryptoswap_exchange/overview.md
+  - Curve DAO:
+      - Overview: curve_dao/overview.md
+  - Registry:
+      - Overview: registry/overview.md
+
+
 markdown_extensions:
   - admonition
   - meta
@@ -61,13 +92,13 @@ theme:
   palette:
     - scheme: default
       primary: black
-      accent: black
+      accent: red
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
     - scheme: slate
-      primary: white
-      accent: white
+      primary: black
+      accent: red
       toggle:
         icon: material/weather-night
         name: Switch to dark mode

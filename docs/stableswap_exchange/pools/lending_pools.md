@@ -45,7 +45,7 @@ The template source code for lending pools may be viewed on GitHub.
 
 ### `StableSwap.underlying_coins`
 
-!!! info "`StableSwap.underlying_coins(i: uint256) → address: view`"
+!!! description "`StableSwap.underlying_coins(i: uint256) → address: view`"
 
     Getter for the array of underlying coins within the pool.
 
