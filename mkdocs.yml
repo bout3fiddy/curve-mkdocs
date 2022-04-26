@@ -33,6 +33,9 @@ nav:
         - SynthSwap: stableswap_exchange/cross_asset_swaps/synthswap_exchange.md
     - Factory:
         - Overview: stableswap_exchange/factory/overview.md
+        - Deployer and Registry:
+            - Overview: stableswap_exchange/factory/deployer_and_registry/overview.md
+            - Contract API: stableswap_exchange/factory/deployer_and_registry/contract_api.md
   - Cryptoswap Exchange:
       - Overview: cryptoswap_exchange/overview.md
   - Curve DAO:
