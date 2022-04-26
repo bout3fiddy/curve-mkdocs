@@ -1,5 +1,21 @@
-The `Factory` contract is used to deploy new Curve pools and to find existing ones. It is deployed to the mainnet 
-at the following address:
+# Curve Factory
+
+The factory allows for permissionless deployment of Curve pools and gauges. Source code for factory contracts may be 
+viewed on [Github](https://github.com/curvefi/curve-factory).
+
+# Organization
+
+The factory has several core components:
+
+- The **factory** is the main contract used to deploy new pools and gauges. It also acts a registry for finding the 
+  deployed pools and querying information about them.
+- **Pools** are deployed via a **proxy contract**. The implementation contract targetted by the proxy is determined 
+  according to the base pool. This is the same technique used to create pools in Uniswap V1.
+- **Deposit contracts** (“zaps”) are used for wrapping and unwrapping underlying assets when depositing into or 
+  withdrawing from pools.
+
+The `Factory` contract is used to deploy new Curve pools and gauges. It also acts as a registry, which is useful for
+finding deployed curve pools and gauges. It is deployed to the mainnet at the following address:
 
 [0xB9fC157394Af804a3578134A6585C0dc9cc990d4](https://etherscan.io/address/0xB9fC157394Af804a3578134A6585C0dc9cc990d4)
 
@@ -19,6 +35,12 @@ Source code for this contract is may be viewed on
       Tokens that take a fee upon a successful transfer may cause the pool to break or act in unexpected ways.
     - Pools deployed by the factory cannot be paused or killed.
     - Pools deployed by the factory are not eligible for CRV rewards.
+
+The factory can be used to deploy the following:
+
+- plain pools
+- metapools (paired against admin-approved base pools)
+- gauges
 
 # Base Pools
 
