@@ -41,6 +41,7 @@ nav:
       - Overview: factory/overview.md
       - Deployer API: factory/deployer_api.md
       - Registry API: factory/registry_api.md
+      - Admin Controls: factory/admin_controls.md
 
 markdown_extensions:
   - admonition
