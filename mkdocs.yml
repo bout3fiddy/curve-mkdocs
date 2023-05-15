@@ -10,38 +10,65 @@ plugins:
   - minify:
       minify_html: true
 
+# test
 nav:
-  - Stableswap Exchange:
-    - Overview: stableswap_exchange/overview.md
-    - Pools:
-        - Overview: stableswap_exchange/pools/overview.md
-        - Plain Pools: stableswap_exchange/pools/plain_pools.md
-        - Lending Pools: stableswap_exchange/pools/lending_pools.md
-        - Metapools: stableswap_exchange/pools/metapools.md
-        - Admin Controls: stableswap_exchange/pools/admin_pool_settings.md
-    - Liquidity Pool Tokens:
-        - Overview: stableswap_exchange/lp_tokens/overview.md
-        - Curve Token V1: stableswap_exchange/lp_tokens/curve_token_v1.md
-        - Curve Token V2: stableswap_exchange/lp_tokens/curve_token_v2.md
-        - Curve Token V3: stableswap_exchange/lp_tokens/curve_token_v3.md
-    - Deposit Contracts:
-        - Overview: stableswap_exchange/deposit_contracts/overview.md
-        - Lending Pool Deposits: stableswap_exchange/deposit_contracts/lending_pool_deposits.md
-        - Metapool Deposits: stableswap_exchange/deposit_contracts/metapool_deposits.md
-    - Cross Asset Swaps:
-        - Overview: stableswap_exchange/cross_asset_swaps/overview.md
-        - SynthSwap: stableswap_exchange/cross_asset_swaps/synthswap_exchange.md
-  - Cryptoswap Exchange:
-      - Overview: cryptoswap_exchange/overview.md
   - Curve DAO:
-      - Overview: curve_dao/overview.md
+    - Overview: curve_dao/overview.md
+    - Crypto Pool Proxy: curve_dao/CryptoPoolProxy.md           # CryptoPoolProxy.vy
+    - Curve DAO Token: curve_dao/ERC20CRV.md                    # ERC20CRV.vy
+    - Fee Distributor: curve_dao/FeeDistributor.md              # FeeDistributor.vy
+    - Gauge Controller: curve_dao/GaugeController.md            # GaugeController.vy
+    - Gauge Proxy: curve_dao/GaugeProxy.md                      # GaugeProxy.vy
+    - Minter: curve_dao/Minter.md                               # Minter.vy
+    - Pool Proxy: curve_dao/PoolProxy.md                        # PoolProxy.vy
+    - Pool Proxy Sidechain: curve_dao/PoolProxySidechain.md     # PoolProxySidechain.vy
+    - Voting-Escrow Token: curve_dao/VotingEscrow.md            # VotingEscrow.vy
+    - Bridging: 
+      - Overview: curve_dao/bridging/overview
+      - AnySwap Bridge: curve_dao/bridging/AnySwapBridger.md
+      - Polygon Bridge: curve_dao/bridging/PolygonBridger.md
+      - Root Forwarder: curve_dao/bridging/RootForwarder.md
+    - Burners: 
+      - Overview: curve_dao/burners/overview
+    - Gauges: 
+      - Overview: curve_dao/gauges/overview
+    - Streamers: 
+      - Overview: curve_dao/streamers/overview
+    - Vests: 
+      - Overview: curve_dao/vests/overview
+    
+  - Stableswap Exchange:    
+    - Overview: stableswap_exchange/overview.md 
+    - Pools:
+      - Overview: stableswap_exchange/pools/overview.md
+      - Plain Pools: stableswap_exchange/pools/plain_pools.md
+      - Lending Pools: stableswap_exchange/pools/lending_pools.md
+      - Metapools: stableswap_exchange/pools/metapools.md
+      - Admin Controls: stableswap_exchange/pools/admin_pool_settings.md
+    - Lquidity Pool Tokens:
+      - Overview: stableswap_exchange/lp_tokens/overview.md
+      - Curve Token V1: stableswap_exchange/lp_tokens/curve_token_v1.md
+      - Curve Token V2: stableswap_exchange/lp_tokens/curve_token_v2.md
+      - Curve Token V3: stableswap_exchange/lp_tokens/curve_token_v3.md
+    - Deposit Contracts:
+      - Overview: stableswap_exchange/deposit_contracts/overview.md
+      - Lending Pool Deposits: stableswap_exchange/deposit_contracts/lending_pool_deposits.md
+      - Metapool Deposits: stableswap_exchange/deposit_contracts/metapool_deposits.md
+    - Cross Asset Swaps:
+      - Overview: stableswap_exchange/cross_asset_swaps/overview.md
+      - SynthSwap: stableswap_exchange/cross_asset_swaps/synthswap_exchange.md
+
+  - Cryptoswap Exchange:
+    - Overview: cryptoswap_exchange/overview.md
+
   - Registry:
-      - Overview: registry/overview.md
+    - Overview: registry/overview.md
+
   - Factory:
-      - Overview: factory/overview.md
-      - Deployer API: factory/deployer_api.md
-      - Registry API: factory/registry_api.md
-      - Admin Controls: factory/admin_controls.md
+    - Overview: factory/overview.md
+    - Deployer API: factory/deployer_api.md
+    - Registry API: factory/registry_api.md
+    - Admin Controls: factory/admin_controls.md
 
 markdown_extensions:
   - admonition
