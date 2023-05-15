@@ -171,6 +171,36 @@ Minter Contract is deployed on the Ethereum Mainnet at:  0xd061D61a4d941c39E5453
         'todo'
         ```
 
+### `minted`
+
+!!! description "`Minter.allowed_to_mint_for(arg0: address, arg1: address) -> uint256: view`"
+
+    todo
+
+    | Input      | Type   | Description |
+    | ----------- | -------| ----|
+    | `arg0` |  `address` | Address |
+    | `arg1` |  `address` | Address |
+
+    ??? quote "Source code"
+
+        ```python hl_lines="1"
+        event Minted:
+            recipient: indexed(address)
+            gauge: address
+            minted: uint256
+
+        minted: public(HashMap[address, HashMap[address, uint256]])
+        ```
+
+    === "Example"
+        
+        ```shell
+        >>> Minter.minted(0x7a16fF8270133F063aAb6C9977183D9e72835428, 0xe5d5aa1bbe72f68df42432813485ca1fc998de32)
+        175216847783215075239045
+        ```
+
+
 
 ### `toggle_approve_mint`
 
